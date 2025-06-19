@@ -1,0 +1,13 @@
+# The main pipeline for DAB_POC
+resources:
+  pipelines:
+    DAB_POC_pipeline:
+      name: DAB_POC_pipeline
+      catalog: dab_poc_dev
+      schema: DAB_POC_${bundle.target}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src
