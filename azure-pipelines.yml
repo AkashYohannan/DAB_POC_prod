@@ -11,8 +11,8 @@ steps:
 
   - script: |
       cd files
-      databricks bundle validate -t dev
-      databricks bundle deploy -t dev
+      databricks bundle validate -t prod
+      databricks bundle deploy -t prod
     env:
       DATABRICKS_HOST: $(DATABRICKS_HOST)
       DATABRICKS_TOKEN: $(DATABRICKS_TOKEN)
